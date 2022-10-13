@@ -33,22 +33,20 @@ do
   ((tailcount++))
   fi
 #done
-done 
-echo ""
 
+    difference=$(( headcount - tailcount ))
+    if(( headcount == 21 && difference >= 2 ))
+    then
+        echo "Heads won by $difference points"
+        break
+    elif(( tailcount == 21 && difference >= 2 ))
+    then
+         echo "Tails won by $difference points"
+         break
+    fi
+    
+done
 echo "The Heads count is $headcount and Tails Count is $tailcount"
-
-if(( headcount > tailcount ))
-then
-    echo "Winner is Heads"
-elif(( tailcount > headcount ))
-then
-    echo "Winner is Tails"
-else    
-    echo "Its tie"
-fi
-
-
 
 
 
