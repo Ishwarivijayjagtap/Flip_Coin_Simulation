@@ -1,8 +1,9 @@
 
+
   echo ""
    echo "Welcome to Flip-Coin Simulation Problem"
    echo ""
-read -p "enter number of times to toss:" n
+ read -p "enter number of times to toss:" n
 
    Result=$((RANDOM%2))
 
