@@ -1,4 +1,4 @@
-
+x
 
   echo ""
    echo "Welcome to Flip-Coin Simulation Problem"
@@ -17,8 +17,10 @@ fi
 
   headcount=0
   tailcount=0
-   for(( i=1 ; i<=n; i++ ))
- do
+while(( $headcount != 21 && $tailcount != 21 ))
+do
+  # for(( i=1 ; i<=n; i++ ))
+ #do
   coin=$(( $RANDOM%2 ))
   if [[ $coin == 1 ]]
   then
@@ -30,7 +32,8 @@ fi
     echo ""
   ((tailcount++))
   fi
-done
+#done
+done 
 echo ""
 
 echo "The Heads count is $headcount and Tails Count is $tailcount"
